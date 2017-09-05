@@ -1,4 +1,4 @@
-# Updated React Redux template
+# Example of high order component
 
 Personal use only
 
