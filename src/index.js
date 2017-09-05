@@ -8,6 +8,7 @@ import App from './components/app';
 import Resources from './components/resources';
 import Header from './components/header';
 import reducers from './reducers';
+import requireAuth from './components/require_authentication';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -17,7 +18,7 @@ ReactDOM.render(
         <div>
           <Header />
           <Switch>
-            <Route path="/resources" component={Resources} />
+            <Route path="/resources" component={requireAuth(Resources)} />
             <Route path="/" component={App} />
           </Switch>    
         </div>
